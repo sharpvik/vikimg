@@ -3,7 +3,7 @@ import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class Writer {
+public class ReadWriter {
 
     public static boolean write(String filepath, byte[] bytes) {
         File file = new File(filepath);
