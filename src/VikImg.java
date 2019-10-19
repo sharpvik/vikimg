@@ -55,7 +55,7 @@ public class VikImg {
         frame.setSize(img.width, img.height);
         frame.setLocationRelativeTo(null);
 
-        DrawPoints panel = new DrawPoints(0, 40);
+        DrawPoints panel = new DrawPoints(img.width, img.height, img.bitmap);
         frame.add(panel);
 
         frame.setVisible(true);
