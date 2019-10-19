@@ -5,6 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.ByteBuffer;
 
+// Graphics
+import java.awt.*;
+import javax.swing.*;
+
 public class VikImg {
 
     private int width;
@@ -40,12 +44,21 @@ public class VikImg {
     }
 
     public static void main(String[] args) throws Exception {
-        String testFilePath = "../test/ava.vimg";
+        String testFilePath = "../test/flower.vimg";
         VikImg img = new VikImg();
         img.read(testFilePath);
         System.out.println(img.width);
         System.out.println(img.height);
-//        System.out.println( new String(img.bitmap) );
+
+        JFrame frame = new JFrame("VikImg Image Viewer");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(img.width, img.height);
+        frame.setLocationRelativeTo(null);
+
+        DrawPoints panel = new DrawPoints(0, 40);
+        frame.add(panel);
+
+        frame.setVisible(true);
     }
 
 }
