@@ -1,0 +1,3 @@
+./build
+cd out
+java VikImg

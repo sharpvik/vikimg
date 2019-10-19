@@ -1,4 +1,8 @@
 if [ ! -d out ]; then
     mkdir out
+else
+    if [ -f out/* ]; then
+        rm out/*
+    fi
 fi
 javac src/*.java -d out
