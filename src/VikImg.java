@@ -44,11 +44,13 @@ public class VikImg {
     }
 
     public static void main(String[] args) throws Exception {
-        String testFilePath = "../test/flower.vimg";
+        String testFilePath = "../test/forest.vimg";
         VikImg img = new VikImg();
         img.read(testFilePath);
-        System.out.println(img.width);
-        System.out.println(img.height);
+        System.out.printf(
+            " Image width: %d pixels\nImage height: %d pixels\n", 
+            img.width, img.height
+        );
 
         JFrame frame = new JFrame("VikImg Image Viewer");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
